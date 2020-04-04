@@ -85,6 +85,7 @@ var generatePassword = function () {
     window.alert("You did not make a selection. Please select at least one password criteria.");
     return generatePassword();
   } else {
+    password = '';
     for (i = 0; i < passwordLength; i++){
       password += charList.charAt(Math.floor(Math.random() * charList.length));
     }
@@ -98,6 +99,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
