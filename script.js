@@ -88,6 +88,7 @@ var generatePassword = function () {
     for (i = 0; i < passwordLength; i++){
       password += charList.charAt(Math.floor(Math.random() * charList.length));
     }
+    return password;
   }
 };
 
